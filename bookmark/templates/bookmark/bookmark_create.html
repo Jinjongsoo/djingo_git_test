@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+{% block title %}
+Add Bookmark
+{% endblock %}
+
+{% block content %}
+<div class="row">
+    <div class="col"></div>
+    <div class="col-12 col-xl-8">
+        <div class="alert alert-info" role="alert">
+            Please insert bookmark information.
+        </div>
+        <form action="" method="post">
+            {% csrf_token %}
+            {{form.as_p}}
+            <input type="submit" value="Create">
+        </form>
+    </div>
+    <div class="col"></div>
+</div>
+{% endblock %}
